@@ -8,6 +8,7 @@ import SignupScreen from './src/screens/Signup'
 import TrackCreateScreen from './src/screens/TrackCreate'
 import TrackDetailsScreen from './src/screens/TrackDetails'
 import TrackListScreen from './src/screens/TrackList'
+import { SafeAreaView } from 'react-native'
 
 const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -15,8 +16,8 @@ const Tab = createBottomTabNavigator()
 const AuthStackNavigator = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Signin" component={SigninScreen} />
-      <Stack.Screen name="Signup" component={SignupScreen} />
+      <Stack.Screen name="Signin" component={SigninScreen} options={{ headerShown: false, contentStyle: { backgroundColor: '#fff' } }} />
+      <Stack.Screen name="Signup" component={SignupScreen} options={{ headerShown: false, contentStyle: { backgroundColor: '#fff' } }} />
     </Stack.Navigator>
   )
 }
